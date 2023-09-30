@@ -3,7 +3,7 @@ const mongoose = require("mongoose")
 const tributeRoute = require(`./routes/tributeRoutes`)
 const path = require("path")
 const app = express()
-
+const PORT = process.env.PORT
 
 
 
@@ -28,4 +28,4 @@ app.use(express.static(path.join(__dirname, "public")))
 
 app.use(`/`, tributeRoute)
 
-app.listen(3000, () => {console.log("Server running. . .")})
+app.listen(PORT, () => {console.log("Server running. . .")})
