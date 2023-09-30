@@ -3,13 +3,13 @@ const mongoose = require("mongoose")
 const tributeRoute = require(`./routes/tributeRoutes`)
 const path = require("path")
 const app = express()
-const PORT = process.env.PORT
+const Tribute = require("../20hungerGames/models/Tribute")
 
 
 
 
 
-const url = 'mongodb+srv://ilanbarrosveras123:rUoJEXd28bmvugS1@cluster0.0m4uzfn.mongodb.net/';
+const url = 'mongodb+srv://ilanVeras:3b56z9HH2020@cluster0.srlb0js.mongodb.net/';
 
 mongoose.connect(url, {
     useNewUrlParser: true,
@@ -28,4 +28,4 @@ app.use(express.static(path.join(__dirname, "public")))
 
 app.use(`/`, tributeRoute)
 
-app.listen(PORT, () => {console.log("Server running. . .")})
+app.listen(3000, () => {console.log("Server running. . .")})
