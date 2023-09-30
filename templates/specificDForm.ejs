@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose the District</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/general.css">
+    <style>
+        .circle {
+        position: relative;
+        border: 1px solid black;
+        padding: 0;
+        margin: 1em auto;
+        width: 20em;
+        height: 20em;
+        border-radius: 50%;
+        list-style: none;
+        overflow: hidden;
+        margin-top: 50px;
+        }
+
+        li {
+        border: 3px solid white;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 50%;
+        transform-origin: 0% 100%;
+        }
+
+        .text {
+        position: absolute;
+        font-size: large;
+        font-weight: bolder;
+        left: -100%;
+        width: 200%;
+        height: 200%;
+        text-align: center;
+        transform: skewY(60deg) rotate(15deg);
+        padding-top: 20px;
+        
+        }
+
+        li:first-child {
+        transform: rotate(0deg) skewY(-60deg);
+        }
+
+        li:nth-child(2) {
+        transform: rotate(30deg) skewY(-60deg);
+        }
+
+        li:nth-child(3) {
+        transform: rotate(60deg) skewY(-60deg);
+        }
+
+        li:nth-child(4) {
+        transform: rotate(90deg) skewY(-60deg);
+        }
+
+        li:nth-child(5) {
+        transform: rotate(120deg) skewY(-60deg);
+        }
+
+        li:nth-child(6) {
+        transform: rotate(150deg) skewY(-60deg);
+        }
+
+        li:nth-child(7) {
+        transform: rotate(180deg) skewY(-60deg);
+        }
+
+        li:nth-child(8) {
+        transform: rotate(210deg) skewY(-60deg);
+        }
+
+        li:nth-child(9) {
+        transform: rotate(240deg) skewY(-60deg);
+        }
+
+        li:nth-child(10) {
+        transform: rotate(270deg) skewY(-60deg);
+        }
+
+        li:nth-child(11) {
+        transform: rotate(300deg) skewY(-60deg);
+        }
+
+        li:nth-child(12) {
+        transform: rotate(330deg) skewY(-60deg);
+        }
+
+        li:hover{
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header style="color: white">
+        <img src="../assets/capitol/catching_fire_capitol_seal_vector_by_trebory6-d62l0oa.png" alt="" width="100px" class="mt-2 mb-2">
+        <h1>Select The District</h1>
+        <div class="menu">
+            <a href="/" class="btn">Home</a>
+            <a href="/all" class="btn">All Tributes</a>
+            <a href="/form" class="btn">New Tribute</a>
+            <a href="/formDistrict" class="btn">Search By District</a>
+            <a href="/formEdition" class="btn">Search By Edition</a>
+        </div>
+    </header>
+    <!-- <form action="/d" method="GET">
+        <select name="district">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+        <button type="submit">Search</button>
+    </form> -->
+
+
+    <ul class="circle">
+        <li>
+          <div class="text" onclick="teste(1)">1</div>
+        </li>
+        <li>
+          <div class="text" onclick="teste(2)">2</div>
+        </li>
+        <li>
+          <div class="text" onclick="teste(3)">3</div>
+        </li>
+        <li>
+          <div class="text" onclick="teste(4)">4</div>
+        </li>
+        <li>
+          <div class="text" onclick="teste(5)">5</div>
+        </li>
+        <li>
+          <div class="text" onclick="teste(6)">6</div>
+        </li>
+        <li>
+          <div class="text" onclick="teste(7)">7</div>
+        </li>
+        <li>
+          <div class="text" onclick="teste(8)">8</div>
+        </li>
+        <li>
+          <div class="text" onclick="teste(9)">9</div>
+        </li>
+        <li>
+          <div class="text" onclick="teste(10)">10</div>
+        </li>
+        <li>
+          <div class="text" onclick="teste(11)">11</div>
+        </li>
+        <li>
+          <div class="text" onclick="teste(12)">12</div>
+        </li>
+      
+      </ul>
+    <footer class="sticky-footer" style="bottom: 0">
+        President Coriolanus Snow
+        <hr>
+        Minister of Technology Ilan Veras
+    </footer>
+    <script src="../javascript/scriptDform.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/general.css">
+    <title>Edit</title>
+</head>
+<body>
+<body>
+    <header>
+        <div class="menu">
+            <img src="../assets/capitol/catching_fire_capitol_seal_vector_by_trebory6-d62l0oa.png" alt="" width="100px" class="mt-2 mb-2">
+            <h2><%=body.nameTribute%></h2>
+            <a href="/" class="btn">Home</a>
+            <a href="/all" class="btn">All Tributes</a>
+            <a href="/form" class="btn">New Tribute</a>
+            <a href="/formDistrict" class="btn">Search By District</a>
+            <a href="/formEdition" class="btn">Search By Edition</a>
+        </div>
+    </header>
+    <form action="/edit/<%=body.id%>" method="POST">
+        <input  name="nameTribute" placeholder="Name" value="<%= body.nameTribute %>">
+        <input min="12" type="number"  name="age" placeholder="Age" value="<%= body.age %>">
+        <h3>District</h3>
+        <select name="district" value="">
+            <option type="number" value="1" <%=body.district == 1 ? 'selected' : ''%>>1</option>
+            <option type="number" value="2" <%=body.district == 2 ? 'selected' : ''%>>2</option>
+            <option type="number" value="3" <%=body.district == 3 ? 'selected' : ''%>>3</option>
+            <option type="number" value="4" <%=body.district == 4 ? 'selected' : ''%>>4</option>
+            <option type="number" value="5" <%=body.district == 5 ? 'selected' : ''%>>5</option>
+            <option type="number" value="6" <%=body.district == 6 ? 'selected' : ''%>>6</option>
+            <option type="number" value="7" <%=body.district == 7 ? 'selected' : ''%>>7</option>
+            <option type="number" value="8" <%=body.district == 8 ? 'selected' : ''%>>8</option>
+            <option type="number" value="9" <%=body.district == 9 ? 'selected' : ''%>>9</option>
+            <option type="number" value="10" <%=body.district == 10 ? 'selected' : ''%>>10</option>
+            <option type="number" value="11" <%=body.district == 11 ? 'selected' : ''%>>11</option>
+            <option type="number" value="12" <%=body.district == 12 ? 'selected' : ''%>>12</option>
+        </select>
+        <h3>Sex</h3>
+        <input type="radio" name="sex" id="male" value="2" <%= body.newSex === 2 ? 'checked' : '' %>>
+        <label for="male">Male</label>
+
+        <input type="radio" name="sex" id="female" value="1" <%= body.newSex === 1 ? 'checked' : '' %>>
+        <label for="female">Female</label>
+        <h3>Skills</h3>
+        <input  name="skills" placeholder="Skills" value="<%= body.skills %>">
+        <input type="number" min="1" max="76" name="edition" placeholder="edition" value="<%= body.edition %>">
+        <h3>Condition</h3>
+        <input type="radio" name="condition" value="reaped" <%=body.condition == 'reaped' ? 'checked' : ''%>>
+        <label for="reaped">Reaped</label>
+        <input type="radio" name="condition" value="volunteer" <%=body.condition == 'volunteer' ? 'checked' : ''%>>
+        <label for="volunteer">Volunteer</label>
+        <h3>Winner</h3>
+        <input type="radio" name="winner" value="false" <%=body.winner == false ? 'checked' : ''%>>
+        <label for="false">No</label>
+        <input type="radio" name="winner" value="true" <%=body.winner == true ? 'checked' : ''%>>
+        <label for="true">Yes</label>
+        <h3>Status</h3>
+        <input type="radio" name="status" value="alive" <%=body.status == 'alive' ? 'checked' : ''%>>
+        <label for="alive">Alive</label>
+        <input type="radio" name="status" value="deceased" <%=body.status == 'deceased' ? 'checked' : ''%>>
+        <label for="alive">Deceased</label>
+        <input type="radio" name="status" value="unknown">
+        <label for="alive" <%=body.status == 'unknown' ? 'checked' : ''%>>Unknown</label>
+        <input  name="imageUrl" placeholder="Image Link" value="<%= body.imageUrl %>">
+        <h3>Wanted</h3>
+        <input type="radio" name="wanted" value="false" <%=body.wanted == false ? 'checked' : ''%>>
+        <label for="false">No</label>
+        <input type="radio" name="wanted" value="true" <%=body.wanted == true ? 'checked' : ''%>>
+        <label for="true">Yes</label>
+        <button>Save</button>
+    </form>
+
+    <%if(error){%>
+        <h3><%=error.message%></h3>
+    <%}%>
+    <footer style="bottom: 0">
+        President Coriolanus Snow
+        <hr>
+        Minister of Technology Ilan Veras
+    </footer>
+</body>
+</html>
+
+
+</body>
+</html>

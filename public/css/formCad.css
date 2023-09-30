@@ -1,0 +1,9 @@
+body{
+    text-align: center;
+}
+input[type="text"], input[type="number"]{
+    min-width: 150px;
+    max-width: 150px;
+    text-align: center;
+    margin-bottom: 10px;
+}
