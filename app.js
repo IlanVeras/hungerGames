@@ -3,7 +3,7 @@ const mongoose = require("mongoose")
 const tributeRoute = require(`./routes/tributeRoutes`)
 const path = require("path")
 const app = express()
-const Tribute = require("../20hungerGames/models/Tribute")
+
 
 
 
