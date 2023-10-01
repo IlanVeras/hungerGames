@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3030;
 
 
 
-const url = 'mongodb+srv://ilanbarrosveras123:rUoJEXd28bmvugS1@cluster0.0m4uzfn.mongodb.net/'
+const url = 'mongodb+srv://ilanbarrosveras123:rUoJEXd28bmvugS1@cluster0.0m4uzfn.mongodb.net/games'
 mongoose.set('strictQuery', false);
 
 mongoose.connect(url, {
