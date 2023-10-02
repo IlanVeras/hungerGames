@@ -43,6 +43,10 @@
                         </section>
                         <h2><%= tribute.nameTribute %></h2>
                         <h4>District: <%= tribute.district %></h4>
+                        <%if(tribute.skills){%>
+                            <hr>
+                            <strong>Skills</strong>: <%=tribute.skills%>
+                        <%}%>
                     </section>
                     <a href="/edit/<%=tribute._id%>">Edit</a>
                     <a href="/del/<%=tribute._id%>">Del</a>
