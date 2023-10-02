@@ -9,6 +9,8 @@
     <title>All TESTE</title>
     
     <style>
+
+
     </style>
 </head>
 <body>
@@ -45,11 +47,13 @@
                         <h4>District: <%= tribute.district %></h4>
                         <%if(tribute.skills){%>
                             <hr>
-                            <strong>Skills</strong>: <%=tribute.skills%>
+                            <div class="skillsD">
+                                <strong>Skills</strong>: <%=tribute.skills%>
+                            </div>
                         <%}%>
                     </section>
-                    <a href="/edit/<%=tribute._id%>">Edit</a>
-                    <a href="/del/<%=tribute._id%>">Del</a>
+                    <a class="btn m-2 mb-4 edit" type="link" href="/edit/<%=tribute._id%>">Edit</a>
+                    <a class="btn m-2 mb-4 del"  type="link" href="/del/<%=tribute._id%>">Del</a>
                 </form>
             </div>
         <% } %>
