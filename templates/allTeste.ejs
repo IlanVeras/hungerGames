@@ -43,8 +43,10 @@
                         <section class="frame">
                             <img src="<%=tribute.imageUrl == '' || tribute.imageUrl == null ? '../assets/capitol/testeG.png' : tribute.imageUrl%>" alt="tribute <%=tribute.nameTribute%> picture" width="190px" height="260px">
                         </section>
-                        <h2><%= tribute.nameTribute %></h2>
-                        <h4>District: <%= tribute.district %></h4>
+                        <div class="detailsT">
+                            <h2><%= tribute.nameTribute %></h2>
+                            <h4>District: <%= tribute.district %></h4>
+                        </div>
                         <%if(tribute.skills){%>
                             <hr>
                             <div class="skillsD">
@@ -52,8 +54,8 @@
                             </div>
                         <%}%>
                     </section>
-                    <a class="btn m-2 mb-4 edit" type="link" href="/edit/<%=tribute._id%>">Edit</a>
-                    <a class="btn m-2 mb-4 del"  type="link" href="/del/<%=tribute._id%>">Del</a>
+                    <a class="btn bE m-2 mb-4 edit" type="link" href="/edit/<%=tribute._id%>">Edit</a>
+                    <a class="btn bD m-2 mb-4 del"  type="link" href="/del/<%=tribute._id%>">Del</a>
                 </form>
             </div>
         <% } %>

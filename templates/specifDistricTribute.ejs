@@ -6,6 +6,7 @@
     <title>District</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/all.css">
 </head>
 <body>
     <%if(tributes[0]){%>
@@ -27,8 +28,10 @@
                         <section class="frame">
                             <img src="<%=tributes[i].imageUrl == '' || tributes[i].imageUrl == null ? '../assets/capitol/testeG.png' : tributes[i].imageUrl%>" alt="tributes <%=tributes[i].nametributes%> picture" width="190px" height="260px">
                         </section>
-                        <h2><%= tributes[i].nameTribute %></h2>
-                        <h4>District: <%= tributes[i].district %></h4>
+                        <div class="detailsT">
+                            <h2><%= tributes[i].nameTribute %></h2>
+                            <h4>District: <%= tributes[i].district %></h4>
+                        </div>
                     </section>
                     <a href="/edit/<%=tributes[i]._id%>" class="btn m-2 mb-4 edit">Edit</a>
                     <a href="/del/<%=tributes[i]._id%>" class="btn m-2 mb-4 del">Del</a>

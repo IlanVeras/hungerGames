@@ -78,3 +78,7 @@ a.btn.edit:hover{
     color: black;
     font-weight: bold;
 }
+
+.detailsT{
+    padding: 10px;
+}
